@@ -14,14 +14,23 @@ public class MagicTrick {
 
         // Add 4, then multiply the result by 4.
         magicNumber = magicNumber + 4;
+        System.out.println("After adding 4, the result is: " + magicNumber);
+
+        // Add 4, then multiply the result by 4.
         magicNumber = magicNumber * 4;
+        System.out.println("After multiplying by 4, the result is: " + magicNumber);
 
         // Subtract 8,
         magicNumber = magicNumber - 8;
+        System.out.println("After subtracting 8, the result is: " + magicNumber);
+
         // then divide the result by 4.
         magicNumber = magicNumber / 4;
+        System.out.println("After dividing by 4, the result is: " + magicNumber);
+
         // Finally subtract your original secret number.
         magicNumber = magicNumber - myNumber;
+        System.out.println("After subtracting the original number, the result is: " + magicNumber);
 
         // The answer is always 2.
         System.out.println("The answer is always 2.");
