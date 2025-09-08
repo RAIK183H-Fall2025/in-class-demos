@@ -37,5 +37,10 @@ public class MagicTrick {
         System.out.println("The answer is: " + magicNumber);
 
         scnr.close();
+
+        double x =  3.7 % 1.3;
+        int y = -235435 % 7;
+        int u = -235435 / 7;
+        System.out.println("The answer is: " + y + " and " + u);
     }
 }
