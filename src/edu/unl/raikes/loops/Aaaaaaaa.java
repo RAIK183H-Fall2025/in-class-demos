@@ -2,9 +2,9 @@ package edu.unl.raikes.loops;
 
 public class Aaaaaaaa {
     public static void main(String[] args) {
-        printAs(8);
+        printAs(6);
         System.out.println();
-        printAs(7);
+        printAs(5);
         System.out.println();
         printAs(4);
         System.out.println();
@@ -24,13 +24,13 @@ public class Aaaaaaaa {
 
         // loop through all of the rows in the small grid
         int totalRows = size * 3;
-        for (int row = -1; row < totalRows + 1; row++) {
+        for (int row = 0; row < totalRows; row++) {
             // use integer division on the small-grid row to get
             // the number of the stripe (the rows of the big grid)
             int stripe = row / size;
 
             // at the start of a new row, print the left border
-            System.out.print("|");
+            System.out.print("| ");
 
             // loop through all of the columns in the small grid
             for (int col = 0; col < 10 * size; col++) {
@@ -44,11 +44,11 @@ public class Aaaaaaaa {
 
                 // actually print the appropriate char
                 if (isSolidZone && stripe % 2 == 0) { // if this is in the right-side solid area and an even stripe
-                    System.out.print("%");
+                    System.out.print("% ");
                 } else if (isSolidZone && stripe % 2 == 1) { // if we're in the right-side solid area and an odd stripe
-                    System.out.print("+");
+                    System.out.print("+ ");
                 } else if (isEmpty) { // if we're in the star area but the block should be empty
-                    System.out.print(".");
+                    System.out.print(". ");
                 } else { // if this is in the star area and the block should be an A
                     System.out.print(getAPixel(row % size, col % size, size));
                 }
@@ -68,9 +68,9 @@ public class Aaaaaaaa {
         boolean isRightUpline = row < center && col == center + row + oneIfEven;
 
         if (isBar || isLeg || isLeftUpline || isRightUpline) {
-            return "*";
+            return "* ";
         } else {
-            return ".";
+            return ". ";
         }
     }
 }
