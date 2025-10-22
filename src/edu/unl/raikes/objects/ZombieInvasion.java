@@ -4,7 +4,7 @@ public class ZombieInvasion {
     public static void main(String[] args) {
         int townIndex = 0;
 
-        Town[] towns = new Town[22];
+        Town[] towns = new Town[24]; // 🪄🎩✨
         towns[townIndex++] = new Town("Jeffreyville", "Adam Britten", 0, 0);
 
         // Olivia and Autumn
@@ -70,6 +70,15 @@ public class ZombieInvasion {
         // Matt and Hank
         towns[townIndex++] = new Town("Matland", "Matthew McConaughey", 16.2, 14.5);
 
+        // Val's area
+        towns[townIndex++] = new Town("Giesentine", 67, 14);
+
+        // Showcasing the best constructor
+        towns[townIndex++] = new Town("Vectorburg", 1.0f, Math.random() * Math.PI * 2f);
+        String mayorsName = towns[0].getName();
+        mayorsName.toUpperCase();
+        // muahahahahaha - the power is all mine!!!";
+
         // for each town
 
         for (Town town : towns) {
@@ -77,10 +86,11 @@ public class ZombieInvasion {
             // calculate distances
             double distance = towns[0].distanceTo(town);
             String distanceString = String.format("%.3f", distance);
-            
+
             // convert distances to times for when the zombies will arrive
-            System.out.println("eeek! " + town.name + " you are " + distanceString + " miles from " + towns[0].name
-                    + " and will be overwrought by zombies in HI VAL -- oh hey!");
+            System.out
+                    .println("eeek! " + town + " you are " + distanceString + " mile(s) from " + towns[0].getName()
+                            + " and will be overwrought by zombies in *some amount of time*!");
 
             // notify
         }
